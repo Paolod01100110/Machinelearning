@@ -27,3 +27,10 @@ print(df.describe())
 
 print("\n### conteggio delle specie ###")
 print(df['species'].value_counts())
+
+# branch 2 analisi approfondita
+print("\n### matrice di correlazione ###")
+print(df.corr(numeric_only=True))
+
+print("\n### statistiche per specie ###")
+print(df.groupby('species').agg(['mean', 'max', 'min', 'std']))
