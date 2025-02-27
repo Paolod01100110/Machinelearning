@@ -1,0 +1,1 @@
+Questo repository contiene un'analisi dettagliata del dataset Iris utilizzando Pandas, NumPy, Seaborn e Matplotlib. Il progetto è suddiviso in tre branch, ognuno dedicato a una parte specifica dell'analisi.
