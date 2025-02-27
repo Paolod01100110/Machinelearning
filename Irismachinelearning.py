@@ -34,3 +34,19 @@ print(df.corr(numeric_only=True))
 
 print("\n### statistiche per specie ###")
 print(df.groupby('species').agg(['mean', 'max', 'min', 'std']))
+
+# branch 3 visualizzazione dei dati
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df, x='species', y='sepal length (cm)')
+plt.title('Boxplot della lunghezza del sepalo per specie')
+plt.xlabel('Specie')
+plt.ylabel('Lunghezza sepalo (cm)')
+plt.show()
+
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=df, x='sepal length (cm)', y='petal length (cm)', hue='species', style='species')
+plt.title('Scatter plot: Lunghezza sepalo vs Lunghezza petalo per specie')
+plt.xlabel('Lunghezza sepalo (cm)')
+plt.ylabel('Lunghezza petalo (cm)')
+plt.legend(title='Specie')
+plt.show()
